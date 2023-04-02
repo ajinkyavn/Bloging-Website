@@ -1,18 +1,14 @@
 import './App.css';
-// import Header from './Components/Header.js'
-import Navbar from './Components/Navbar.js'
-import Category from './Components/Category.js'
-import Blogs from './Components/Blogs.js'
+import Sidebar from './Components/Sidebar';
+import Feed from './Components/Feed';
+import Widgets from './Components/Widgets';
+
 function App() {
   return (
     <div className="App">
-      <div>
-      <Navbar/>
-      </div>
-      <div className='subdiv'>
-        <Category/>
-        <Blogs/>
-      </div>
+      <Sidebar/>
+      <Feed/>
+      <Widgets/>
     </div>
   );
 }
