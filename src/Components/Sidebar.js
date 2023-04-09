@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "../css/Sidebar.css";
 import SidebarOption from "./SidebarOption";
 import Avatar from "@mui/material/Avatar";
@@ -7,11 +7,6 @@ import Avatar from "@mui/material/Avatar";
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import ListAltIcon from '@mui/icons-material/ListAlt';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Button from '@mui/material/Button'
 
 export default function Sidebar(){
@@ -22,15 +17,10 @@ export default function Sidebar(){
         {/* <Icon className="sidebar__Icon"/> */}
         <Avatar src="logo.jpg"/>
         <SidebarOption active Icon={HomeIcon} text="Home"/>
-        <SidebarOption Icon={SearchIcon} text="Explore"/>
-        <SidebarOption Icon={NotificationsNoneIcon} text="Notifications"/>
-        <SidebarOption Icon={MailOutlineIcon} text="Messages"/>
-        <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks"/>
-        <SidebarOption Icon={ListAltIcon} text="Lists"/>
-        <SidebarOption Icon={PermIdentityIcon} text="Profile"/>
-        <SidebarOption Icon={MoreHorizIcon} text="More"/>
+        {/* <SidebarOption Icon={SearchIcon} text="MyBlogs"/>
+        <SidebarOption Icon={NotificationsNoneIcon} text="Subscriptions"/> */}
         
-        <Button variant="outlined" className="sidebar__tweet" fullWidth>Blog</Button>
+        <Link to="/postblog" className="link"><Button variant="outlined" className="sidebar__tweet" fullWidth>Blog</Button></Link>
         </div>
     );
 }

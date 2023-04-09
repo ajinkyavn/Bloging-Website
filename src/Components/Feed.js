@@ -1,34 +1,23 @@
 import React from 'react';
 import '../css/Feed.css';
-import TweetBox from './TweetBox';
 import Post from './Post';
 
 
 
-function Feed() {
+function Feed({array}) {
+  console.log(array)
+  const items = array;
+  items.reverse();
   return (
     <div className='feed'>
-        {/* Header */}
         <div className='feed__header'>
             <h2>Home</h2>
         </div>
-
-        {/* Tweetbox */}
-        <TweetBox/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-       
-
+        <Post username={"devendramukane@gmail.com"} text={"This is sample"}/>
+         {items.map(item => (
+            <Post username={item.curruser} text={item.textarea}  />
+            
+      ))}
     </div>
   )
 }

@@ -1,37 +1,38 @@
 .info{
     
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: larger;
-        /* text-align: center ; */
-    
+    /* padding: px; */
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    /* text-align: center ; */
+
 }
 .main{
-    align-items: center;
-    flex: 0.3;
-    
+align-items: center;
+flex: 0.3;
+
 }
 
 .main2{
-    text-align: center;
+text-align: center;
 }
 
 .heading{
-    padding: 10px;
-    text-align: center;
-    font-weight: 600;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+padding: 5px;
+text-align: center;
+font-weight: 600;
+font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .social{
-    padding: 10px !important;
-    font-size: 40px !important;
-    cursor: pointer;
-    color: black;
+padding: 5px !important;
+font-size: 40px !important;
+cursor: pointer;
+color: black;
 
 }
 
 .info > h3 {
-     padding: 15px;
-}  
+ padding-left: 10px;
+}   

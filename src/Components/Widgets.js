@@ -31,9 +31,6 @@ function Widgets() {
           </IconButton>
         </div>
       <br/>
-      <br/>
-      <br/>
-      <br/>
       <h2 className='heading'>Back-End</h2>
       <div className='info'>
         <Avatar src="aj.png"/>

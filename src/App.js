@@ -1,48 +1,23 @@
+import React from "react";
 import './App.css';
-// import Register from './Components/Register';
-import Sidebar from './Components/Sidebar';
-import Feed from './Components/Feed';
-import Widgets from './Components/Widgets';
-// import Login  from './Components/Login';
-// import Register from './Components/Register';
-// import './css/Login.css'
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Welcome from "./Components/Welcome";
+import PostBlog from "./Components/PostBlog";
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar/> 
-      <Feed/>
-      <Widgets/>
-      {/* <Login/> */}
-      {/* <Register/> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/postblog" element={<PostBlog />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
 
-// import React, { useState } from "react";
-// // import logo from './logo.svg';
-// // import './App.css';
-// // import { Login } from "./Components/Login";
-// // import { Register } from "./Components/Register";
-// import PostBlog from "./Components/PostBlog";
-
-// function App() {
-//   // const [currentForm, setCurrentForm] = useState('login');
-
-//   // const toggleForm = (formName) => {
-//   //   setCurrentForm(formName);
-//   // }
-
-//   return (
-//     <div className="App">
-//       {/* {
-//         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
-//       } */}
-//       <PostBlog/>
-//     </div>
-//   );
-// }
-
-// export default App;
