@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const uri = "mongodb+srv://USERNAME:Password@cluster0.l1bn7bj.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://narkhedeajinkya123:jinx@cluster0.l1bn7bj.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var curruser=''
@@ -23,7 +23,7 @@ app.post("/register", async (req, res) => {
     console.log(email)
     console.log(password)
     const result = await collection.insertOne({ username,email,password });
-    res.send(`User ${result.insertedId} registered successfully`);
+    res.send(`User registered successfully`);
   } catch (error) {
     console.error(error);
     res.status(500).send("Error registering user");

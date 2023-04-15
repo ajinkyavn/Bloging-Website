@@ -1,0 +1,112 @@
+.tweetBox{
+    text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(79deg, #6daabd, #275b97 48%, #0f3e64);
+    padding-bottom: 10px;
+    border-bottom: 8px solid var(--twitter-background);
+    padding-right: 10px;
+
+}
+
+.selectcategory{
+
+  width: 1000px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  color: grey;
+
+}
+@media screen and (min-width: 600px) {
+  .auth-form-container {
+    padding: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input , textarea {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.opt{
+  text-align: center;
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+button {
+  border: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
+} 
+
+.tweetBox > form{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    margin-left: 20px;
+    color: black;
+}
+/* .postblog{
+  align-items: center;
+} */
+
+.tweetBox__input{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    /* text-align: center ; */
+}
+
+.tweetBox >input{
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+.tweetBox__imageInput{
+    border: none;
+    padding: 10px;
+}
+
+.tweetBox__tweetButton{
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    background-color: var(--twitter-color) !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    width: 80px;
+    height: 50px !important;
+    margin-top: 20px !important;
+    margin-left: auto !important;
+}
