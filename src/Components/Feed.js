@@ -1,25 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/Feed.css';
 import Post from './Post';
 
 
 
-function Feed({array}) {
-  console.log(array)
-  const items = array;
-  items.reverse();
+function Feed(props) {
+  const allBlogs = props.array;
+  console.log(props)
+  if (!allBlogs) {
+    return null; 
+  }
+  const reversedBlogs = [...allBlogs].reverse();
   return (
-    <div className='feed'>
-        <div className='feed__header'>
-            <h2>Home</h2>
-        </div>
-        <Post username={"devendramukane@gmail.com"} text={"This is sample"}/>
-         {items.map(item => (
-            <Post username={item.curruser} text={item.textarea}  />
-            
+    <div className="feed">
+      <div className="feed__header">
+        <h2>Blogs</h2>
+      </div>
+      {reversedBlogs.map((item) => (
+        <Post username={item.curruser} text={item.textarea} />
       ))}
     </div>
-  )
+  );
 }
 
 export default Feed;

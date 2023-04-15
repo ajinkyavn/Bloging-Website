@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "../css/Sidebar.css";
 import SidebarOption from "./SidebarOption";
@@ -16,10 +16,15 @@ export default function Sidebar(){
         {/* <Icon/> */}
         {/* <Icon className="sidebar__Icon"/> */}
         <Avatar src="logo.jpg"/>
-        <SidebarOption active Icon={HomeIcon} text="Home"/>
-        {/* <SidebarOption Icon={SearchIcon} text="MyBlogs"/>
-        <SidebarOption Icon={NotificationsNoneIcon} text="Subscriptions"/> */}
-        
+        <Link to="/home" className="link">
+          <SidebarOption active Icon={HomeIcon} text="Home"/>
+        </Link>
+        <Link to="/myblogs" className="link">
+          <SidebarOption Icon={SearchIcon} text="MyBlogs" />
+        </Link>
+        <Link to="/about" className="link">
+          <SidebarOption Icon={NotificationsNoneIcon} text="About"/>
+        </Link>
         <Link to="/postblog" className="link"><Button variant="outlined" className="sidebar__tweet" fullWidth>Blog</Button></Link>
         </div>
     );

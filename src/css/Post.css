@@ -24,7 +24,6 @@
 
 .post__headerDescription{
     margin-bottom: 10px;
-    
     font-size: 20px;
 }
 .post__headerText > h3{
@@ -40,5 +39,5 @@
 .post__headerSpecial{
     font-weight: 600;
     font-size: 15px;
-    color: rgb(68, 66, 66);
+    color: rgb(68,66,66);
 }

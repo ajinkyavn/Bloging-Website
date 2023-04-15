@@ -6,21 +6,27 @@ import Feed from './Feed';
 import Widgets from './Widgets';
 
 export default function Home() {
-    const [allBlogs, setAllBlogs] = useState([]);
+    const [users, setUsers] = useState({});
+    const [myBlogs, setMyBlogs] = useState([]);
     useEffect(() => {
-      Axios.get("http://localhost:5000/home")
+      Axios.get("http://localhost:5000/myblogs")
         .then(response => {
-          setAllBlogs(response.data.total);
+          setUsers(response.data);
+          setMyBlogs(response.data.userBlogs);
         })
         .catch(error => {
           console.log(error);
         });
     }, []);
+    console.log(myBlogs);
+    if(myBlogs.length==0){
+        myBlogs.push("No Blogs to display")
+    }
   return (
     <div className='Home'>
       <Sidebar/>
-      <Feed array={allBlogs}/>
-      <Widgets />
+      <Feed array={myBlogs}/>
+      <Widgets/>
     </div>
   )
 }
