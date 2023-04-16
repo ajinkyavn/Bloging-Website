@@ -8,7 +8,7 @@ import Widgets from './Widgets';
 export default function Home() {
     const [allBlogs, setAllBlogs] = useState([]);
     useEffect(() => {
-      Axios.get("http://localhost:5000/home")
+      Axios.get("http://localhost:5000/education")
         .then(response => {
           setAllBlogs(response.data.total);
         })

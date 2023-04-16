@@ -17,7 +17,8 @@ export default function About() {
             <img src="aj.png" alt="Ajinkya" style={{width:"100%"}} />
               <div class="container">
                 <h2>Jane Doe</h2>
-                <p class="title">CEO & Founder</p>
+                <p class="title">CEO & Founde
+                </p>
                 <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                 <p>jane@example.com</p>
                 <p><button class="button">Contact</button></p>
@@ -41,3 +42,4 @@ export default function About() {
     </>
   )
 }
+

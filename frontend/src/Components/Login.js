@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import '../css/Login.css'
-import { Avatar } from "@mui/material";
 export const Login = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState(''); 
@@ -18,22 +17,18 @@ export const Login = (props) => {
         }
       };
     return (
-        <div>
-          <div className="header">
-            <Avatar src="logo.png" className="logo"/>
-            <h1>𝓐𝓓 𝓑𝓛𝓞𝓖𝓢</h1>
-          </div>
+        <>
         <div className="auth-form-container">
             <h2>Login</h2>
             <form className="login-form" method="post" action="http://localhost:5000/login" onSubmit={loginUser}>
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
                 <button type="submit">Log In</button>
             </form>
             <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
         </div>
-        </div>
+        </>
     )
 }

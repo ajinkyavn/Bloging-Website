@@ -5,10 +5,10 @@ import Sidebar from './Sidebar';
 import Feed from './Feed';
 import Widgets from './Widgets';
 
-export default function Home() {
+export default function Business() {
     const [allBlogs, setAllBlogs] = useState([]);
     useEffect(() => {
-      Axios.get("http://localhost:5000/home")
+      Axios.get("http://localhost:5000/business")
         .then(response => {
           setAllBlogs(response.data.total);
         })

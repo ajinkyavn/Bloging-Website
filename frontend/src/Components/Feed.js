@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/Feed.css';
 import Post from './Post';
-import Dropdown from './Dropdown';
 
 
 
@@ -15,7 +14,7 @@ function Feed(props) {
   return (
     <div className="feed">
       <div className="feed__header">
-      <Dropdown />
+        Blogs
       </div>
       {reversedBlogs.map((item) => (
         <Post username={item.curruser} text={item.textarea} />

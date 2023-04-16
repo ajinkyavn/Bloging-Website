@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 import Feed from './Feed';
 import Widgets from './Widgets';
 
-export default function Home() {
+export default function MyBlogs() {
     const [users, setUsers] = useState({});
     const [myBlogs, setMyBlogs] = useState([]);
     useEffect(() => {
