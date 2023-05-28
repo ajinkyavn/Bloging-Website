@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const uri = "mongodb+srv://narkhedeajinkya123:jinx@cluster0.l1bn7bj.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://{username}:{password}@cluster0.l1bn7bj.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var curruser=''
